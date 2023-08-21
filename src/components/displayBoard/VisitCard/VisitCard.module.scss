@@ -1,0 +1,23 @@
+@import "@/index.scss";
+
+.visit {
+  @include flex(center, center);
+  @include colors($color-light, $color-dark);
+  @include size(100%, auto);
+  font-size: $font-size-number-sm;
+  font-weight: $font-weight-bold;
+  border-radius: $size-border-radius;
+  padding: 0 $size-xl;
+
+  &--active {
+    @include colors($color-light, $color-dark);
+  }
+
+  &--pending {
+    @include colors($color-secondary, $color-dark);
+  }
+  &--completed,
+  &--canceled {
+    @include colors($color-medium, $color-dark);
+  }
+}

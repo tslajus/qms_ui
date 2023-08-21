@@ -1,0 +1,29 @@
+@import "@/index.scss";
+
+.fillers {
+  @include flex(center, center, column, $size-lg);
+}
+
+.specialist {
+  @include flex(center, space-between, row, $size-lg);
+  @include size(100%, auto);
+
+  &__btn {
+    @include size(50%, auto);
+  }
+
+  &__status {
+    text-align: end;
+
+    &--inactive {
+      color: $color-medium;
+    }
+  }
+}
+
+@include media("lg") {
+  .fillers,
+  .specialist {
+    gap: $size-md;
+  }
+}

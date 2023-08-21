@@ -1,0 +1,54 @@
+@import "variables";
+
+@mixin size($width, $height, $minWidth: null, $maxWidth: null) {
+  width: $width;
+  height: $height;
+  @if $minWidth {
+    min-width: $minWidth;
+  }
+  @if $maxWidth {
+    max-width: $maxWidth;
+  }
+}
+
+@mixin colors($bg: $color-gray, $font: $color-medium) {
+  background-color: $bg;
+  color: $font;
+}
+
+@mixin align($align: normal, $justify: flex-start) {
+  align-items: $align;
+  justify-content: $justify;
+}
+
+@mixin flex($align: normal, $justify: flex-start, $direction: row, $gap: 0) {
+  @include align($align, $justify);
+  display: flex;
+  flex-direction: $direction;
+  gap: $gap;
+}
+
+@mixin pageLayout {
+  @include flex(center, center, column);
+  @include size(100%, 100vh);
+}
+
+@mixin media($breakpoint) {
+  @if $breakpoint == "xxl" {
+    @media (max-width: $bp-xxl) {
+      @content;
+    }
+  } @else if $breakpoint == "xl" {
+    @media (max-width: $bp-xl) {
+      @content;
+    }
+  } @else if $breakpoint == "lg" {
+    @media (max-width: $bp-lg) {
+      @content;
+    }
+  } @else if $breakpoint == "md" {
+    @media (max-width: $bp-md) {
+      @content;
+    }
+  }
+}

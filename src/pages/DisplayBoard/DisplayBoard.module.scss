@@ -1,0 +1,10 @@
+@import "@/index.scss";
+
+.board {
+  @include flex(center, center, column, $size-md);
+  padding-right: $size-lg;
+  min-width: 34rem;
+  max-width: 80%;
+  max-height: 90%;
+  overflow-y: scroll;
+}

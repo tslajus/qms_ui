@@ -1,0 +1,26 @@
+@import "@/index.scss";
+
+.header {
+  @include flex(stretch, space-between);
+  @include size(100%, $size-header);
+
+  &__welcome {
+    @include flex(center, center);
+  }
+
+  &__btn {
+    @include colors(transparent, $color-light);
+    @include size(fit-content, 100%);
+    align-self: flex-start;
+    margin-left: $size-sm;
+    transition: color, $transition-fast;
+
+    &--arrow {
+      font-size: $font-size-arrow;
+    }
+
+    &:hover {
+      @include colors(transparent, $color-secondary);
+    }
+  }
+}

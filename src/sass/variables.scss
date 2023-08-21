@@ -1,0 +1,59 @@
+//colors
+
+$color-primary: #90b4e4;
+$color-secondary: #d1c49c;
+$color-dark: #2c3232;
+$color-light: #fefbf2;
+$color-medium: #60696e;
+
+//fonts
+$font-style-primary: "Lexend", sans-serif;
+
+$font-size-sm: 1.5rem;
+$font-size-md: 3rem;
+$font-size-lg: 4.8rem;
+$font-size-mobile-sm: 1.8rem;
+
+$font-size-arrow: 4rem;
+$font-size-number-sm: 5rem;
+$font-size-number-md: 8rem;
+$font-size-number-lg: 10rem;
+
+$font-weight-bold: 800;
+
+//sizes
+$size-xs: 0.5rem;
+$size-sm: 1rem;
+$size-md: 1.5rem;
+$size-lg: 2rem;
+$size-xl: 3rem;
+$size-xxl: 5rem;
+$size-xxxl: 8rem;
+
+$size-header: 10rem;
+$size-visit-card: 40rem;
+$size-dashboard: 40%;
+$size-dashboard-md: 60%;
+$size-dashboard-sm: 90%;
+
+//borders
+$border-focus: inset 0 0 0 0.5rem $color-secondary;
+$size-border-radius: 1rem;
+
+//transitions
+$transition-fast: 0.2s;
+$transition-normal: 0.5s;
+$transition-long: 1.5s;
+
+//layers
+$z-index-top: 5;
+$z-index-bottom: -5;
+
+//breakpoints
+$bp-xxl: 1920px;
+$bp-xl: 1500px;
+$bp-lg: 960px;
+$bp-md: 600px;
+$bp-sm: 768px;
+$bp-xs: 576px;
+$bp-xxs: 320px;

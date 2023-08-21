@@ -1,0 +1,19 @@
+@import "@/index.scss";
+
+.dashboard {
+  @include flex(center, center, column, $size-lg);
+  @include size($size-dashboard, auto, fit-content);
+}
+
+@include media("xl") {
+  .dashboard {
+    width: $size-dashboard-md;
+  }
+}
+
+@include media("lg") {
+  .dashboard {
+    width: $size-dashboard-sm;
+    gap: $size-md;
+  }
+}

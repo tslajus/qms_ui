@@ -1,0 +1,80 @@
+@import "@/index.scss";
+
+.card {
+  @include flex(center, center, row, $size-md);
+  @include size(100%, 100%);
+  @include colors($color-medium, $color-light);
+  padding: $size-md;
+  border-radius: $size-border-radius;
+  flex: 1;
+
+  &--active,
+  &--next {
+    @include flex(center, center, column, $size-md);
+    @include colors($color-light, $color-dark);
+  }
+
+  &__number {
+    font-weight: $font-weight-bold;
+    font-size: $font-size-number-md;
+
+    &--active,
+    &--next {
+      font-size: $font-size-number-lg;
+    }
+  }
+
+  &__buttons {
+    @include flex(center, center, row, $size-md);
+    @include size(100%, auto);
+  }
+
+  &__info {
+    @include flex(center, center, column);
+    padding: $size-lg;
+  }
+
+  &__empty {
+    @include flex(center, center, column);
+    @include size(auto, 100%);
+  }
+}
+
+@include media("xl") {
+  .card {
+    flex-direction: column;
+
+    &__number {
+      font-size: $font-size-number-sm;
+
+      &--active,
+      &--next {
+        font-size: $font-size-number-md;
+      }
+    }
+  }
+}
+
+@include media("lg") {
+  .card {
+    &__buttons {
+      flex-direction: column;
+    }
+  }
+}
+
+@include media("md") {
+  .card {
+    &__number {
+      font-size: $font-size-number-sm;
+    }
+
+    &__buttons {
+      gap: $size-sm;
+    }
+
+    &__info {
+      padding: $size-sm;
+    }
+  }
+}

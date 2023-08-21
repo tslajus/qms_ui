@@ -1,0 +1,13 @@
+@import "@/index.scss";
+
+.buttons {
+  @include flex(center, space-between, row, $size-md);
+  @include size(100%, auto);
+}
+
+@include media("md") {
+  .buttons {
+    flex-direction: column;
+    gap: $size-sm;
+  }
+}

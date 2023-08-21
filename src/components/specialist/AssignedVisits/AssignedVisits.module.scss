@@ -1,0 +1,35 @@
+@import "@/index.scss";
+
+.visits {
+  @include flex(center, center, column, $size-md);
+  @include size(100%, 100%);
+
+  &__heading {
+    font-size: $font-size-md;
+  }
+
+  &__list {
+    @include flex(center, start, column, $size-lg);
+    @include size(100%, 100%);
+    padding-right: $size-lg;
+    overflow-y: scroll;
+  }
+}
+
+@include media("xl") {
+  .visits {
+    width: 80%;
+
+    &__heading {
+      font-size: $font-size-sm;
+    }
+  }
+}
+
+@include media("md") {
+  .visits {
+    &__list {
+      gap: $size-md;
+    }
+  }
+}

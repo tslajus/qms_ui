@@ -1,0 +1,24 @@
+@import "@/index.scss";
+
+.visits {
+  @include flex(stretch, space-between, row, $size-xl);
+  @include size(100%, 100%);
+
+  &__container {
+    @include flex(center, center, column, $size-md);
+    flex: 1;
+  }
+
+  &__status {
+    font-size: $font-size-md;
+  }
+}
+
+@include media("xl") {
+  .visits {
+    flex-direction: column;
+    &__status {
+      font-size: $font-size-sm;
+    }
+  }
+}

@@ -1,0 +1,30 @@
+@import "@/index.scss";
+
+.btn {
+  @include size(100%, auto);
+  @include colors($color-primary, $color-dark);
+  @include flex(center, center);
+
+  border-radius: $size-border-radius;
+  padding: $size-lg $size-xl;
+  transition: background-color $transition-fast;
+
+  &:hover {
+    background-color: $color-secondary;
+  }
+
+  &--disabled {
+    @include colors($color-medium, $color-dark);
+    cursor: auto;
+
+    &:hover {
+      background-color: $color-medium;
+    }
+  }
+}
+
+@include media("xl") {
+  .btn {
+    padding: $size-md;
+  }
+}

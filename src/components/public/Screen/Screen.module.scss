@@ -1,0 +1,10 @@
+@import "@/index.scss";
+
+.screen {
+  @include flex(center, center);
+  @include colors($color-light, $color-dark);
+  @include size(100%, auto);
+
+  flex: 1;
+  border-radius: $size-border-radius;
+}

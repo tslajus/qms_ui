@@ -1,0 +1,15 @@
+@import "@/index.scss";
+
+.message {
+  @include flex(center, center, column, $size-md);
+  padding: $size-md;
+
+  &__number {
+    font-size: $font-size-number-lg;
+    font-weight: $font-weight-bold;
+  }
+
+  &__text {
+    text-align: center;
+  }
+}

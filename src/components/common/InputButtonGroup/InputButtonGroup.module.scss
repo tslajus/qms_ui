@@ -1,0 +1,20 @@
+@import "@/index.scss";
+
+.group {
+  @include flex(center, center, row, $size-lg);
+  @include size(100%, atuo);
+
+  &__input {
+    width: 50%;
+  }
+}
+
+@include media("lg") {
+  .group {
+    gap: $size-md;
+
+    &__input {
+      width: 100%;
+    }
+  }
+}
