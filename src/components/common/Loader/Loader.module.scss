@@ -2,12 +2,8 @@
 
 .loader {
   @include flex(center, center);
-  @include size(100%, 100%);
-
-  &--full-screen {
-    @include size(100%, 100vh);
-    background-color: $color-dark;
-  }
+  @include size(100%, 100vh);
+  background-color: $color-dark;
 
   &__ring {
     @include flex(center, center);
