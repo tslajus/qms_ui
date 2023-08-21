@@ -18,8 +18,6 @@ The following requirements are needed to run the front-end application:
 - **Node.js**: Version required to run the front-end application.
 - **Vite**: A fast web dev build tool. Required for running and building the application.
 - **React**: Version 18.2.0 or above.
-- **React DOM**: Version 18.2.0 or above.
-- **React Router DOM**: Version 6.15.0 or above.
 - **Sass**: Version 1.66.1 or above.
 - **Axios**: Version 1.4.0 or above.
 
