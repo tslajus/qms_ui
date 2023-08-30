@@ -42,7 +42,7 @@ function SpecialistDashboard() {
 
   return (
     <PageWrapper>
-      <Header forSpecialist onLogout={handleLogout} />
+      <Header onLogout={handleLogout} forSpecialist />
       {loginPanel}
       <div className={styles.dashboard}>
         {isLoggedIn && <FirstTwoVisits />}

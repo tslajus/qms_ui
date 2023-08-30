@@ -6,9 +6,16 @@ import styles from "./Header.module.scss";
 interface HeaderProps {
   onLogout?: () => void;
   forSpecialist?: boolean;
+  displayBoardOpen?: boolean;
+  toggleDisplayBoard?: () => void;
 }
 
-function Header({ onLogout, forSpecialist = false }: HeaderProps) {
+function Header({
+  onLogout,
+  forSpecialist = false,
+  displayBoardOpen,
+  toggleDisplayBoard,
+}: HeaderProps) {
   const { isLoggedIn, specialistName } = useAuth();
 
   const renderedName = isLoggedIn && specialistName && forSpecialist && (
@@ -30,6 +37,13 @@ function Header({ onLogout, forSpecialist = false }: HeaderProps) {
           className={styles["header__btn"]}
           label="Logout"
           onClick={onLogout}
+        />
+      )}
+      {!forSpecialist && (
+        <Button
+          className={styles["header__btn"]}
+          label={displayBoardOpen ? "Hide Queue" : "Show Queue"}
+          onClick={toggleDisplayBoard}
         />
       )}
     </div>

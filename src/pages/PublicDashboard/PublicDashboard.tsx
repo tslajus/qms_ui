@@ -12,6 +12,7 @@ import {
   InputButtonGroup,
   Screen,
   ReservationCode,
+  DisplayBoard,
 } from "@/components";
 
 import styles from "./PublicDashboard.module.scss";
@@ -24,6 +25,7 @@ function PublicDashboard() {
   const [checkTimeInput, setCheckTimeInput] = useState<string>("");
   const [cancelVisitInput, setCancelVisitInput] = useState<string>("");
   const [reservationCode, setReservationCode] = useState<string | null>(null);
+  const [displayBoardOpen, setDisplayBoardOpen] = useState(false);
   const [loading, setLoading] = useState(false);
 
   const handleReservation = async () => {
@@ -97,7 +99,12 @@ function PublicDashboard() {
 
   return (
     <PageWrapper>
-      <Header />
+      <Header
+        displayBoardOpen={displayBoardOpen}
+        toggleDisplayBoard={() =>
+          setDisplayBoardOpen((prevState) => !prevState)
+        }
+      />
       <div className={styles.dashboard}>
         <Screen content={screenContent} />
         <Button
@@ -128,6 +135,7 @@ function PublicDashboard() {
           disabled={loading}
         />
       </div>
+      <DisplayBoard isOpen={displayBoardOpen} />
     </PageWrapper>
   );
 }

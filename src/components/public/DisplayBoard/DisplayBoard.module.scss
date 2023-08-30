@@ -1,0 +1,35 @@
+@import "@/index.scss";
+
+.board {
+  @include flex(center, start, column, $size-md);
+  @include size(
+    calc((100% - $size-dashboard) / 2),
+    calc(100% - (2 * $size-header))
+  );
+
+  background-color: $color-dark;
+  padding: 0 calc($size-xxl - $size-md) 0 $size-xxl;
+  position: absolute;
+  right: 0;
+  overflow-y: scroll;
+  transition: all $transition-normal;
+
+  &--closed {
+    transform: translateX(100%);
+    opacity: 0;
+  }
+}
+
+@include media("xl") {
+  .board {
+    width: calc((100% - $size-dashboard-md) / 2);
+    padding: 0 calc($size-lg) 0 $size-lg;
+  }
+}
+
+@include media("lg") {
+  .board {
+    width: 100%;
+    padding: 0 calc($size-xxl) 0 $size-xxl;
+  }
+}

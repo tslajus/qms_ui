@@ -3,11 +3,11 @@
 .visit {
   @include flex(center, center);
   @include colors($color-light, $color-dark);
-  @include size(100%, auto);
+  @include size(100%, 100%);
   font-size: $font-size-number-sm;
   font-weight: $font-weight-bold;
   border-radius: $size-border-radius;
-  padding: 0 $size-xl;
+  transition: background-color $transition-fast;
 
   &--active {
     @include colors($color-light, $color-dark);
@@ -19,5 +19,17 @@
   &--completed,
   &--canceled {
     @include colors($color-medium, $color-dark);
+  }
+}
+
+@include media("xl") {
+  .visit {
+    font-size: $font-size-number-xs;
+  }
+}
+
+@include media("lg") {
+  .visit {
+    font-size: $font-size-number-sm;
   }
 }

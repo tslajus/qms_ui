@@ -4,6 +4,8 @@
   @include flex(stretch, space-between);
   @include size(100%, $size-header);
 
+  padding: 0 $size-lg;
+
   &__welcome {
     @include flex(center, center);
   }

@@ -1,14 +1,9 @@
 import { useEffect, useState } from "react";
-import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { BrowserRouter, Routes, Route, Navigate } from "react-router-dom";
 import { AuthProvider } from "./contexts";
 import { wakeUpServer } from "./utils";
 
-import {
-  HomePage,
-  PublicDashboard,
-  SpecialistDashboard,
-  DisplayBoard,
-} from "@/pages";
+import { HomePage, PublicDashboard, SpecialistDashboard } from "@/pages";
 import { Loader } from "./components";
 
 function App() {
@@ -34,7 +29,7 @@ function App() {
           <Route path="/" element={<HomePage />} />
           <Route path="/public" element={<PublicDashboard />} />
           <Route path="/specialist" element={<SpecialistDashboard />} />
-          <Route path="/display-board" element={<DisplayBoard />} />
+          <Route path="/*" element={<Navigate to="/" />} />
         </Routes>
       </BrowserRouter>
     </AuthProvider>

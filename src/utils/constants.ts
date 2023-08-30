@@ -6,6 +6,8 @@ export const SPECIALISTS_URL = `${PREFIX}/specialists`;
 
 export const INITIAL_SCREEN_MSG = "Welcome!";
 export const FETCH_INTERVAL = 3000;
+export const FETCH_INTERVAL_FAST = 1000;
+export const FETCH_INTERVAL_SLOW = 10000;
 export const VISIT_TIME = 20;
 export const DISPLAY_BOARD_VISITS = 8;
 
